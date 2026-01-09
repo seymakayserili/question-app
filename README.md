@@ -1,74 +1,75 @@
 # 🧠 React Quiz App
 
-Bu proje, React ve Vite kullanılarak geliştirilmiş bir **quiz (soru-cevap) uygulamasıdır**.  
-Kullanıcıya belirli kurallar çerçevesinde sorular sorulur ve test sonunda doğru, yanlış ve boş cevap sayıları gösterilir.
+A dynamic **Quiz (Question–Answer) application** built using **React** and **Vite**.
 
-<a href="https://vermillion-elf-94ddfa.netlify.app/">Canlı link</a>
+The app presents users with a set of rules-based questions and displays detailed results at the end of the quiz, including correct, incorrect, and unanswered questions.
 
-## 🚀 Kullanılan Teknolojiler
-<ul>
-<li> ⚛️ React</li>
-<li> ⚡ Vite</li>
-<li> 🎨 CSS</li>
-<li> 🧩 JavaScript (ES6)</li>
-</ul>
+🔗 **Live Demo:**  
+https://vermillion-elf-94ddfa.netlify.app/
+
 ---
 
-## 📋 Proje Özellikleri
+## 🚀 Tech Stack
 
-Uygulama aşağıdaki gereksinimleri karşılayacak şekilde geliştirilmiştir:
-<ul>
-<li> ✅ Uygulama **10 sorudan** oluşmaktadır.</li>
-<li> ⏱️ Her soru ekranda **30 saniye** kalır.</li>
-<li> 👀 İlk **4 saniye** boyunca cevap şıkları gizlidir.</li>
-<li> 👉 Bir şık tıklandığında veya süre dolduğunda otomatik olarak **bir sonraki soruya geçilir**.</li>
-<li> 🔙 **Geçmiş sorulara dönülemez.**</li>
-<li> 📊 Test bitiminde:</li>
-<ul>
-  <li> Doğru cevap sayısı </li> 
-  <li> Yanlış cevap sayısı </li> 
-  <li> Boş bırakılan soru sayısı  </li>
-  <li> Verilen cevaplar (soru numarasıyla birlikte)  </li>
-  kullanıcıya gösterilir.</li>
-  </ul>
-</ul>
+- ⚛️ **React**
+- ⚡ **Vite**
+- 🎨 **CSS**
+- 🧩 **JavaScript (ES6)**
+
 ---
 
-## 🖥️ Kurulum ve Çalıştırma
+## 📋 Features
 
-Projeyi bilgisayarında çalıştırmak için:
+The application is developed to meet the following requirements:
+
+- ✅ The quiz consists of **10 questions**
+- ⏱️ Each question is displayed for **30 seconds**
+- 👀 Answer options are hidden for the first **4 seconds**
+- 👉 When an option is selected **or time runs out**, the app automatically moves to the next question
+- 🔙 **Users cannot return to previous questions**
+- 📊 At the end of the quiz, the user sees:
+  - Number of correct answers  
+  - Number of incorrect answers  
+  - Number of unanswered questions  
+  - A detailed list of given answers with question numbers  
+
+---
+
+## 🧠 Application Logic
+
+- Questions are loaded from the `questions.js` file  
+- A countdown timer starts for each question  
+- Once an answer is selected, it is locked and saved  
+- Quiz results are displayed on the same page after completion
+
+## ✨ Developer
+
+Şeyma Kayserili
+Developed as part of the Patika.dev Front-End Bootcamp.
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/
+│   ├── pictures/        # Question images
+│   └── questions.js    # Quiz data
+├── components/
+│   ├── Info/
+│   └── Questions/
+├── App.jsx
+└── main.jsx
+
+```
+
+## 🖥️ Installation & Running the Project
+
+To run this project locally:
 
 ```bash
 git clone <repo-link>
 cd question-app
 npm install
 npm run dev
-http://localhost:5173
-
-📁 Proje Yapısı
-
-src/
- ├─ assets/
- │   ├─ pictures/      # Soru görselleri
- │   └─ questions.js  # Soru verileri
- ├─ components/
- │   ├─ Info/
- │   └─ Questions/
- ├─ App.jsx
- └─ main.jsx
-
-🧠 Uygulama Mantığı
-<ul>
-<li> Sorular questions.js dosyasından alınır.</li>
-
-<li> Her soru için sayaç başlatılır.</li>
-
-<li> Kullanıcı cevap verdiğinde cevap kilitlenir ve sonuç kaydedilir.</li>
-
-<li> Test sonunda sonuçlar aynı sayfada gösterilir.</li>
-</ul>
-
-✨ Geliştirici
-
-Şeyma Kayserili
-Patika.dev Front-End Bootcamp kapsamında geliştirilmiştir.
